@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    font-family:'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+
+
+/*------------------------------START START SECTION---------------------*/
+
+.start{
+    display: block;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+   
+}
+
+.content{
+    background-color: #fff;
+    width: 60%;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 0 .5rem;
+}
+.text{
+    flex: 0 0 50%;
+    background-color: #fff;
+    padding: 10rem 2rem;
+}
+.image{
+    flex: 1;
+}
+.image img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+.text-bigger{
+    font-size: 2.2rem;
+    margin-top: .8rem;
+}
+.text-medium{
+    font-size:1.5rem;
+    margin-top: .5rem;
+    font-weight: 700;
+}
+.text-submit{
+    margin-top: 2rem;
+    padding: 1.5rem 2.5rem;
+    border: 1px solid #00c;
+    border-radius: 1rem;
+    background-color: #00c;
+    color: white;
+    letter-spacing: 1px;
+    outline: none;
+}
+.text-submit:hover{
+    outline: none;
+}
+.text-submit:active{
+
+    transform: translateY(2px);
+
+}
+.greet{
+    color: #00c;
+    font-size: 2.8rem;
+}
+.place{
+    color:#f33;
+    font-size: 1.6rem; 
+    display: inline-block;
+    transform: scale(1.1);
+    transition: all 1s ease;
+    animation-name: scaleup;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes scaleup{
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.place:nth-of-type(1){
+    margin-right: 1rem;
+}
+.place:nth-of-type(2){
+    margin-left: 1rem;
+}
+
+
+
+/*-----------------------------------------------------------------------*/
+
+/*
+/*------------------------------SEARCH PLACE-------------------------*/
+
+.searchfeature{
+    display: none;
+    background-image:linear-gradient(to left bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('../img/basic.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height:100vh;
+    
+}
+.searchbox{
+    text-align: center;
+    padding:6rem 2rem;
+    
+}
+.searchbox h1{
+    font-size:3.5rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    background:linear-gradient(to left bottom,#ffe6ff,#fff7ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.searchbox input{
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    width: 35%;
+    border-radius: 1rem;
+    border: 1px solid #d5d5d5;
+    margin-right: 1rem;
+    font-size: inherit;
+    margin-top: 2rem;
+    background-color:#bbb;
+}
+.searchbox input::-webkit-input-placeholder{
+    font-size: 1.35rem;
+    color:black ;
+}
+.searchbox input:focus{
+    outline: none;
+}
+
+
+
+.row{
+    max-width:114rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+.col3{
+    flex: 0 0 30%;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid #ddd;
+    color: #bbb;
+
+}
+.col3 p{
+    font-size: 2rem;
+    transition:all .4s ease;
+}
+.col3 p:hover{
+    background-color: black;
+}
+.col3 h5{
+    margin: 1rem 0;
+    transition:all .4s ease;
+}
+.col3 h5:hover{
+    letter-spacing: 2px;
+}
+.mainfocus{
+    font-weight: bold;
+    color: #e00;
+}
+.cloudicon{
+    font-size: 8rem;
+}
+
+.circle{
+    
+    animation-name:rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.wind{
+
+    animation-name: leftright;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes leftright{
+    0%{
+        transform: translateX(-.5rem);
+    }
+    40%{
+        transform: translateX(0rem);
+    }
+    80%{
+        transform: translateX(.5rem);
+    }
+    100%{
+        transform: translateX(-.5rem);
+    }
+}
+
+@keyframes rotate{
+
+    0%{
+        transform:rotate(0deg);
+    }
+    20%{
+        transform:rotate(90deg);
+    }
+    40%{
+        transform:rotate(180deg);
+    }
+    60%{
+        transform:rotate(270deg);
+    }
+    80%{
+        transform:rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------*/
+
+/*----------------------------------------------------RESPONSIVE DESIGN MODE ---------------------------*/
+
+
+@media (max-width:500px){
+
+    html{
+        font-size: 9px;
+    }
+    .bug{
+        font-size:.5rem;
+    }
+    .content{
+        width: 90%;
+    }
+
+    .image{
+        flex: 0;
+        display: none;
+    }
+    .text{
+        flex: 0 0 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
